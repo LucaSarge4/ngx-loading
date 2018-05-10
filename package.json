@@ -1,6 +1,6 @@
 {
-  "name": "ngx-loading",
-  "version": "1.0.14",
+  "name": "ngx-loading-custom-font-size",
+  "version": "1.0.15",
   "description": "Forked from https://github.com/Zak-C/ngx-loading. A customisable loading spinner for Angular 4+ applications. With this fork it's possible to change font-size on circleSwish animation",
   "scripts": {
     "publish": "npm publish dist",
