@@ -1,7 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
-
+import { Component, Input, OnInit } from '@angular/core';
+import { ANIMATION_TYPES, ILoadingConfig, LoadingConfig } from './ngx-loading.config';
 import { LoadingConfigService } from './ngx-loading.service';
-import { ILoadingConfig, LoadingConfig, ANIMATION_TYPES } from './ngx-loading.config';
+
 
 @Component({
     selector: 'ngx-loading',
@@ -56,7 +56,8 @@ import { ILoadingConfig, LoadingConfig, ANIMATION_TYPES } from './ngx-loading.co
                 <div class="dot2" [ngStyle]="{'background-color': loadingConfig?.secondaryColour}"></div>
             </div>
 
-            <div class="spinner-circle-swish"*ngIf="getAnimationType(loadingConfig?.animationType) === ANIMATION_TYPES.circleSwish" [ngClass]="{'full-screen' : loadingConfig?.fullScreenBackdrop == true}" [ngStyle]="{'color': loadingConfig?.primaryColour}"></div>
+            <div class="spinner-circle-swish"*ngIf="getAnimationType(loadingConfig?.animationType) === ANIMATION_TYPES.circleSwish" [ngClass]="{'full-screen' : loadingConfig?.fullScreenBackdrop == true}" 
+                    [ngStyle]="{'color': loadingConfig?.primaryColour, 'font-size': loadingConfig?.fontSize}"></div>
 
         </div>
     `,
@@ -132,12 +133,10 @@ import { ILoadingConfig, LoadingConfig, ANIMATION_TYPES } from './ngx-loading.co
             /* Circle Swish styles */
 
             .spinner-circle-swish {
-                font-size: 60px;
                 overflow: hidden;
                 width: 1em;
                 height: 1em;
                 z-index: 2000;
-                font-size: 60px;
                 border-radius: 50%;
                 margin: auto;
                 position: absolute;

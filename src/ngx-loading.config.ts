@@ -6,6 +6,7 @@ export interface ILoadingConfig {
     primaryColour?: string;
     secondaryColour?: string;
     tertiaryColour?: string;
+    fontSize?: string;
     [key: string]: string | boolean | undefined;
 }
 
@@ -17,6 +18,7 @@ export class LoadingConfig implements ILoadingConfig {
     primaryColour?: string;
     secondaryColour?: string;
     tertiaryColour?: string;
+    fontSize?: string;
     [key: string]: string | boolean | undefined;
 
     constructor(config: ILoadingConfig = {}) {
@@ -27,6 +29,7 @@ export class LoadingConfig implements ILoadingConfig {
         this.primaryColour = config.primaryColour;
         this.secondaryColour = config.secondaryColour;
         this.tertiaryColour = config.tertiaryColour;
+        this.fontSize = config.fontSize;
     }
 }
 
